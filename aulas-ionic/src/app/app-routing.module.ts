@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'grid1',
     loadChildren: () => import('./grid1/grid1.module').then( m => m.Grid1PageModule)
   },
+  {
+    path: 'grid2',
+    loadChildren: () => import('./grid2/grid2.module').then( m => m.Grid2PageModule)
+  },
 ];
 
 @NgModule({
