@@ -12,4 +12,8 @@ export class FormPage implements OnInit {
   ngOnInit() {
   }
 
+  public primeiroMetodo(a:number, b:number){
+    console.log("asfds" + (a + b))
+  }
+
 }
