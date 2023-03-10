@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+      <ion-item *ngFor="let filme of filmes; let ix = index" [hidden]="!filme.visible">
+        <ion-col size="1">
+          <ion-button color="success" (click)="addFilmesAss(filme)" *ngIf="!filme.adicionado"><ion-icon
+              name="add"></ion-icon></ion-button>
+          <ion-button color="danger" (click)="removeFilmesAss(filme)" *ngIf="filme.adicionado"><ion-icon
+              name="close"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col size="1">{{filme.cod}}</ion-col>
+        <ion-col size="4">{{filme.titulo}}</ion-col>
+        <ion-col size="4" (click)="showSinopse($event, filme.sinopse)">{{maskSinopse(filme.sinopse, 40)}}</ion-col>
+        <ion-col size="1">{{filme.ano}}</ion-col>
+        <ion-col size="1"><input [(ngModel)]="filme.status" type="checkbox"></ion-col>
+
+        <ion-reorder slot="end"></ion-reorder>
+
+      </ion-item>
+    </ion-reorder-group>
+  </ion-grid>
+
+
+</ion-content>
