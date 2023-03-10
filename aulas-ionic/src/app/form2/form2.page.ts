@@ -5,15 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './form2.page.html',
   styleUrls: ['./form2.page.scss'],
 })
-export class Form2Page implements OnInit {
+export class Form2Page{
 
-  constructor() { }
+  public segment = '0';
 
-  ngOnInit() {
-  }
+  public pessoa = {
+    nome : '',
+    sexo : 'M',
+    data: new Date(),
+    rg : '',
+    cpf : ''
+  };
 
-  public primeiroMetodo(a:number, b:number){
-    console.log("asfds" + (a + b))
+  change(){
+    console.log(this.segment)
   }
 
 }

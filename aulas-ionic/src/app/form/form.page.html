@@ -7,18 +7,11 @@
       <ion-title>formulário</ion-title>
     </ion-col>
   </ion-toolbar>
-  <ion-segment>
-    <ion-segment-button value="0">
-      <ion-label> Dados Pessoais </ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="1">
-      <ion-label> Questionário </ion-label>
-    </ion-segment-button>
-  </ion-segment>
 </ion-header>
   
 <ion-content>
   <ion-grid>
+
     <ion-item style="margin-bottom: 5px">
       <ion-label position="floating">Nome</ion-label>
       <ion-input></ion-input>
@@ -49,9 +42,11 @@
     </ion-item>
 
   </ion-grid>
+</ion-content>
 
 <ion-footer>
   <ion-row>
+    
     <ion-col size="6">
       <ion-button (click)="primeiroMetodo" expand="full" color="success"> SALVAR </ion-button>
     </ion-col>
@@ -61,5 +56,4 @@
     </ion-col>
 
   </ion-row>
-
 </ion-footer>
